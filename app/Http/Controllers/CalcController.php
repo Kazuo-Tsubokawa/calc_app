@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CalcController extends Controller
 {
-    public function calc($num1,$operator,$num2)
+    public function calc($num1, $operator, $num2)
     {
         if ($operator == 'addition') {
             $result = $num1 + $num2;
@@ -19,8 +19,6 @@ class CalcController extends Controller
         } else {
             $result = '演算子が間違えてます。';
         }
-        return view('calc', [
-            'result' => $result,
-        ]);
+        return view('calc', ['result' => $result,]);
     }
 }
